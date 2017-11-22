@@ -5,50 +5,33 @@ Notre application a pour but de faciliter le travail et l'organisation de nos ut
 ### Getting Started
 
 * Téléchager ou cloner l'application
+* Utiliser node pour installer jasmine
+```
+npm install
+```
 * Ouvrir le fichier index.html dans votre navigateur
 
 
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
 
-Une série de tests unitaires est mise à votre disposition dans le dossier "test". Pour les lanc
+Une série de tests unitaires est mise à votre disposition. Pour les utiliser il suffit d'ouvrir le fichier SpecRunner.html se trouvant dans le dossier 'test'.
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
-
+Cette série de tests permet de vérifier le bon fonctionnement des différents fonctionnement de nos to-do lists. Pour cela on utilise jasmine.
 ```
-Give an example
+it('should show completed entries', function () {
+  var todo = {title: 'my todo', completed: true};
+  setUpModel([todo]);
+
+  subject.setView('#/completed');
+
+  expect(view.render).toHaveBeenCalledWith('setFilter', 'completed');
+  expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
+});
 ```
 
-### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
