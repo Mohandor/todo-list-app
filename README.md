@@ -2,7 +2,7 @@
 
 Notre application a pour but de faciliter le travail et l'organisation de nos utilisateurs à travers des to-do-lists.
 
-### Getting Started
+## Getting Started
 
 * Téléchager ou cloner l'application
 * Utiliser node pour installer jasmine
@@ -10,6 +10,31 @@ Notre application a pour but de faciliter le travail et l'organisation de nos ut
 npm install
 ```
 * Ouvrir le fichier index.html dans votre navigateur
+
+## Structure
+* js
+  * app.js
+  * controller.js
+  * helper.js
+  * model.js
+  * store.js
+  * template.js
+  * view.js
+* node_modules
+  * todomvc-app-css
+    * index.css
+  * todomvc-common
+    * base.css
+    * base.js
+  * .DS_Store
+* test
+  * ControllerSpec.js
+  * SpecRunner.html
+* .DS_Store
+* .gitignore
+* index.html
+* license.md
+* package.json
 
 
 ## Running the tests
